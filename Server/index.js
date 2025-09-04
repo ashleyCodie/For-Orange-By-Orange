@@ -26,12 +26,12 @@ app.use("/recipes", recipeIndex)
 app.use("/resources", resourceIndex)
 app.use("/jobs", jobIndex)
 
-app.all("*", (req, res) => {
-    res.status(404).json({
-        success: false,
-        data: "404"
-    })
-})
+// app.all("*", (req, res) => {
+//     res.status(404).json({
+//         success: false,
+//         data: "404"
+//     })
+// })
 
 try{
 const mongoURL =  process.env.MONGODB_URL || ""
